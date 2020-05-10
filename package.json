@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "build": "webpack -p --mode production --https false",
-    "test": "echo \"Error: no test specified\"",
+    "test": "echo \"no test specified\"",
     "server": "webpack-dev-server --mode development",
     "prettier": "./node_modules/.bin/prettier --config .prettierrc.json --write \"src/**/*.@(ts|html|css)\"",
     "generate-icon": ".\\assets\\generate.cmd"

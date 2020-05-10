@@ -32,4 +32,4 @@ jobs:
         app-name: 'wandyezj'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_4f5fa41a502940248318cfdf9a809f1c }}
-        package: .
+        package: .\dist
