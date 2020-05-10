@@ -1,0 +1,47 @@
+{
+  "name": "wandyezj",
+  "version": "0.0.0",
+  "description": "wandyezj.com website",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "webpack -p --mode production --https false",
+    "test": "echo \"Error: no test specified\"",
+    "server": "webpack-dev-server --mode development",
+    "prettier": "./node_modules/.bin/prettier --config .prettierrc.json --write \"src/**/*.@(ts|html|css)\"",
+    "generate-icon": ".\\assets\\generate.cmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandyezj/wandyezj.git"
+  },
+  "author": "wandyezj",
+  "license": "Unlicense",
+  "homepage": "https://github.com/wandyezj/wandyezj#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@types/node": "^13.11.0",
+    "@types/office-js": "^1.0.37",
+    "@types/office-runtime": "^1.0.8",
+    "office-addin-dev-certs": "^1.4.14",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node": "^13.12.0",
+    "prettier": "^2.0.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.1.0",
+    "ts-node": "^8.9.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
