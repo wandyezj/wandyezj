@@ -52,6 +52,10 @@ module.exports = async (env, options) => {
         {
           to: "assets",
           from: "./src/assets"
+        },
+        {
+          to: "favicon.ico",
+          from: "./src/assets/favicon.ico"
         }
       ])
     ],
