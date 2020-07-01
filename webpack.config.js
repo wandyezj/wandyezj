@@ -9,7 +9,7 @@ module.exports = async (env, options) => {
     devtool: "source-map",
     entry: {
       polyfill: "@babel/polyfill",
-      taskpane: "./src/index.ts",
+      index: "./src/index.ts",
     },
     resolve: {
       extensions: [".ts", ".tsx", ".html", ".js"]
@@ -48,6 +48,10 @@ module.exports = async (env, options) => {
         {
           to: "index.css",
           from: "./src/index.css"
+        },
+        {
+          to: "assets",
+          from: "./src/assets"
         }
       ])
     ],
