@@ -1,6 +1,9 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1 {
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo {
@@ -8,4 +11,41 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 3em;
+}
+
+#works {
+    padding-top: 5em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-top: 0.1em;
+    font-size: 1.5em;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    border-bottom: 1px solid;
+    background: #b3ffda;
+}
+
+/* selected link */
+a:active {
+    background-color: #e6fff3;
+    color: black;
 }
