@@ -59,16 +59,29 @@ module.exports = async (env, options) => {
             static: {
                 directory: path.join(__dirname, "..", "dist"),
             },
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-            },
-            https:
-                options.https !== undefined
-                    ? options.https
-                    : await devCerts.getHttpsServerOptions(),
-            port: process.env.npm_package_config_dev_server_port || 3000,
         },
     };
 
+    //Only need to configure webserver in development mode
+    if (options.mode === "development") {
+        config.devServer = {
+            ...config.devServer,
+            open: ["/index.html"],
+            port: 3000,
+            server: {
+                type: "https",
+                options: await getHttpsOptions(),
+            },
+            headers: {
+                "Access-Control-Allow-Origin": "*",
+            },
+        };
+    }
+
     return config;
 };
+
+async function getHttpsOptions() {
+    const options = await devCerts.getHttpsServerOptions();
+    return options;
+}

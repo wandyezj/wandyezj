@@ -6,8 +6,8 @@
         "dist/*"
     ],
     "scripts": {
-        "build": "webpack --config ./config/webpack.config.js --mode development",
-        "server": "webpack-dev-server --mode development",
+        "build": "webpack --config ./config/webpack.config.js --mode production",
+        "start": "webpack serve --config ./config/webpack.config.js --mode development",
         "style": "prettier --config ./config/prettier.json  --write \"@(src|tests|scripts|config)/**/*.@(ts|tsx|js|md|html|css|json)\"",
         "style-check": "prettier --config ./config/prettier.json  --check \"@(src|tests|scripts)/**/*.@(ts|tsx|js|md|html|css|json)\"",
         "generate-icon": ".\\assets\\generate.cmd"
