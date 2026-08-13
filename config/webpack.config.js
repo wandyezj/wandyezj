@@ -1,5 +1,4 @@
 const devCerts = require("office-addin-dev-certs");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
@@ -10,6 +9,11 @@ module.exports = async (env, options) => {
         devtool: isDevelopment ? "inline-source-map" : undefined,
         entry: {
             index: "./src/index.ts",
+        },
+        output: {
+            path: path.resolve(__dirname, "..", "dist"),
+            filename: "[name].js",
+            clean: true,
         },
         resolve: {
             extensions: [".ts", ".tsx", ".html", ".js"],
@@ -28,7 +32,6 @@ module.exports = async (env, options) => {
             ],
         },
         plugins: [
-            new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
                 filename: "index.html",
                 template: "./src/index.html",
